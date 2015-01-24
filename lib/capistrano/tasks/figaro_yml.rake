@@ -55,6 +55,5 @@ end
 
 desc "Server setup tasks"
 task :setup do
-  invoke "secrets_yml:setup"
+  invoke "figaro_yml:setup"
 end
-

@@ -7,8 +7,8 @@ Capistrano tasks for handling figaro `application.yml` when deploying Rails 4+ a
 Add this to `Gemfile`:
 
     group :development do
-      gem 'capistrano', '~> 3.2.1'
-      gem 'capistrano-figaro-yml', '~> 1.0.0'
+      gem 'capistrano', '~> 3.3.0'
+      gem 'capistrano-figaro-yml', '~> 1.0.1'
     end
 
 And then:
