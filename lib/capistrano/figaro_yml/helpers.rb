@@ -6,7 +6,15 @@ module Capistrano
 
       def local_figaro_yml(env)
         @local_figaro_yml ||= YAML.load_file(figaro_yml_local_path)
-        @local_figaro_yml[env]
+        local_figaro = {}
+
+        @local_figaro_yml.each do |key, value|
+          if key == env or !value.is_a?(Hash)
+            local_figaro[key] = @local_figaro_yml[key]
+          end
+        end
+
+        local_figaro
       end
 
       def figaro_yml_env
@@ -14,7 +22,7 @@ module Capistrano
       end
 
       def figaro_yml_content
-        { figaro_yml_env => local_figaro_yml(figaro_yml_env) }.to_yaml
+        local_figaro_yml(figaro_yml_env).to_yaml
       end
 
       # error helpers
