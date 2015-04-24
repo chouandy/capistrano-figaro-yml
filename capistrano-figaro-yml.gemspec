@@ -26,5 +26,5 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'capistrano', '~> 3.1'
   gem.add_runtime_dependency 'sshkit', '~> 1.2', '>= 1.2.0'
 
-  gem.add_development_dependency 'rake', '~> 0'
+  gem.add_development_dependency 'rake', '>= 0'
 end
