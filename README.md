@@ -8,7 +8,7 @@ Add this to `Gemfile`:
 
     group :development do
       gem 'capistrano', '~> 3.3.0'
-      gem 'capistrano-figaro-yml', '~> 1.0.1'
+      gem 'capistrano-figaro-yml', '~> 1.0.2'
     end
 
 And then:
