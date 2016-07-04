@@ -5,7 +5,7 @@ module Capistrano
     module Helpers
 
       def local_figaro_yml(env)
-        @local_figaro_yml ||= YAML.load_file(figaro_yml_local_path)
+        @local_figaro_yml ||= YAML.load(ERB.new(File.read(figaro_yml_local_path)).result)
         local_figaro = {}
         deployment_env = fetch(:rails_env, env)
 
