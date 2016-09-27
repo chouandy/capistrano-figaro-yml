@@ -56,7 +56,7 @@ You can now proceed with other deployment tasks.
 
 ### How it works
 
-When you execute `$ bundle exec production setup`:
+When you execute `$ bundle exec cap production setup`:
 
 - figaro settings from your local `application.yml` are copied to the server.<br/>
 - only "stage" secrets are copied: if you are deploying to `production`,
