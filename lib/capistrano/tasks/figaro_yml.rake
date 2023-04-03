@@ -11,7 +11,7 @@ end
 namespace :figaro_yml do
 
   task :check_figaro_file_exists do
-    next if File.exists?(figaro_yml_local_path)
+    next if File.exist?(figaro_yml_local_path)
     check_figaro_file_exists_error
     exit 1
   end
